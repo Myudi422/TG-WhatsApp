@@ -48,7 +48,7 @@ const getChatTitle = (msg) => {
   } else {
     return `${msg.from.first_name} ${
       msg.from.last_name ? msg.from.last_name : ""
-    } at ${msg.chat.title}`;
+    } - ${msg.chat.title}`;
   }
 };
 

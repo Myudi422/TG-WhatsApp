@@ -116,11 +116,7 @@ const handleMessage = async (message, tgbot, client) => {
 
   const tgMessage = `${
     chat.isGroup
-      ? `${chatName} | <a href="https://wa.me/${contactNumber}?chat_id=${chatId}">${name}</a>`
-      : `<a href="https://wa.me/${contactNumber}?chat_id=${chatId}"><b>${chatName}</b></a> ${
-          message?.isStatus ? "Added new status" : ""
-        }`
-  }. \n${message.body ? `\n${message.body}` : ""}`;
+  }. ${message.body ? `\n${message.body}` : ""}`;
 
   if (message.hasMedia) {
     try {
