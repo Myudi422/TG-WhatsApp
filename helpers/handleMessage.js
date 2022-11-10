@@ -114,7 +114,9 @@ const handleMessage = async (message, tgbot, client) => {
     }
   }
 
-  const tgMessage = `${message.body ? `\n${message.body}` : ""}`;
+  const tgMessage = `${
+    chat.isGroup
+  } ${message.body ? `\n${message.body}` : ""}`;
 
   if (message.hasMedia) {
     try {
